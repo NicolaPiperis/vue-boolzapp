@@ -178,7 +178,10 @@ img{
 .chatting{
     background-image: url(../img/jt4AoG.jpg);
     overflow: auto;
-    flex-grow: 1;   
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;  
+    
 }
 
 #writing-input{
@@ -195,4 +198,33 @@ img{
     font-size: 22px;
     cursor: pointer;
     color: #b1b1b1;
+}
+
+.sent{
+    background-color: #d5f9ba;
+    text-align: left;
+    align-self: flex-end;
+
+}
+
+.received{
+    background-color: #ffffff;
+    text-align: left;
+}
+
+.message{
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 50%;
+    width: fit-content;
+}
+
+.message span {
+    font-size: 12px;
+    opacity: 0.3;
+    align-self: end;
 }
