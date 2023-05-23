@@ -37,12 +37,17 @@ main{
 #container-profile-contacts{
     width: 40%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-#profile{
+#contact-container{
+    flex-grow: 1;
+}
+
+.profile{
     height: 80px;
     background-color: #eaeaea;
-    border-right: 1px black #dadada;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -50,9 +55,10 @@ main{
 
 img{
     height: 55px;
+    cursor: pointer;
 }
 
-#info-profile{
+.info-profile{
     display: flex;
     align-items: center;
     gap: 15px;
@@ -60,7 +66,7 @@ img{
     margin-left: 18px;
 }
 
-#icons-profile{
+.icons-profile{
     display: flex;
     align-items: center;
     gap: 20px;
@@ -134,6 +140,7 @@ img{
 /* CONTACT STYLE */
 #contact-container{
     overflow: auto;
+    flex-grow: 1;
 }
 
 .text-contact{
@@ -154,5 +161,38 @@ img{
 #chatting-side{
     width: 60%;
     height: 100%;
-    background-color: black;
+    border-left: 1px solid #8080804f;
+    display: flex;
+    flex-direction: column;
+}
+
+#write-bar{
+    background-color: #f3eeea;
+    height: 70px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 60%;
+}
+
+.chatting{
+    background-image: url(../img/jt4AoG.jpg);
+    overflow: auto;
+    flex-grow: 1;   
+}
+
+#writing-input{
+    width: 80%;
+    height: 60%;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.icons-footer{
+    font-size: 22px;
+    cursor: pointer;
+    color: #b1b1b1;
 }
