@@ -229,3 +229,11 @@ img{
     opacity: 0.3;
     align-self: end;
 }
+
+.visible{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}

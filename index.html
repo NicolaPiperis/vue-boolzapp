@@ -165,17 +165,19 @@
 
                 <!-- CHATTING PART -->
                 <div 
-                
+                v-for = "(contact, idx) in contacts"
+                :class = "activeContact === idx ? 'visible' : 'hidden' "
                 class="chatting pt-5">
 
                     <div 
-                    v-for = "(contact, idx) in contacts[activeContact]"
-                    class="message sent" >
+                    v-for = "(message, idx) in contact.messages"
+                    :class = "message.status === sent ? ' sent' : ' received' "
+                    class="message" >
                         
-                        {{contact.messages.message}}
+                        {{message.message}}
                         <br>
                         <span>
-                            {{contact.messages.date}}
+                           {{message.date}}
                         </span>
                     </div>
 
