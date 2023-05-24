@@ -201,14 +201,14 @@ img{
     color: #b1b1b1;
 }
 
-.sent{
+.sent_color{
     background-color: #d5f9ba;
     text-align: left;
     align-self: flex-end;
 
 }
 
-.received{
+.received_color{
     background-color: #ffffff;
     text-align: left;
 }
@@ -231,7 +231,7 @@ img{
 }
 
 .visible{
-    display: block;
+    display: flex;
 }
 
 .hidden{

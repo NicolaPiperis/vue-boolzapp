@@ -171,7 +171,7 @@
 
                     <div 
                     v-for = "(message, idx) in contact.messages"
-                    :class = "message.status === sent ? ' sent' : ' received' "
+                    :class = "(message.status === 'sent') ? 'sent_color' : 'received_color' "
                     class="message" >
                         
                         {{message.message}}
@@ -186,7 +186,9 @@
                 <!-- WRITING BAR -->
                 <div id="write-bar" class="d-flex justify-content-around align-items-center">
                     <i class="fa-solid fa-face-smile icons-footer"></i>
-                    <input id="writing-input" type="text" placeholder="Scrivi un messaggio">
+                    <input id="writing-input" type="text" placeholder="Scrivi un messaggio"
+                    v-model = "newMessage" @keyup.enter = "addMessage(idx)"
+                    >
                     <i class="fa-solid fa-microphone icons-footer"></i>
                 </div>
 
