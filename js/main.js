@@ -186,20 +186,32 @@ createApp({
     methods: {
         identity(idx){
             this.activeContact = idx ;
-            },
+        },
         addMessage(idx){
             if(this.newMessage !== ""){
-                this.contacts[idx].messages.push(
+                this.contacts[this.activeContact].messages.push(
                     {
                         date : "",
-                        message : newMessage,
-                        status : "received"
+                        message : this.newMessage,
+                        status : "sent"
                         }
                     )
+                    this.newMessage = "";
+
+                    setTimeout( function() {
+                        this.contacts[this.activeContact].messages.push(
+                            {
+                                date : "",
+                                message : "Ok!",
+                                status : "received"
+                                }
+                            )
+                    }, 1000);
                 }
-            }
         }
-    }).mount("#app");
+            
+    }
+}).mount("#app");
 
 
 
