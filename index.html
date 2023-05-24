@@ -37,7 +37,7 @@
 
                     <div class="info-profile">
                         <!-- IMAGE AVATAR -->
-                        <img src="img/avatar-svgrepo-com.svg" alt="avatar image">
+                        <img src="img/avatar-svgrepo-com(3).svg" alt="avatar image">
                         <!-- PROFILE NAME -->
                         <div>Sofia</div>
                     </div>
@@ -88,19 +88,20 @@
                 <!-- CONTACTS -->
                 <ul id="contact-container" class="list-group list-group-flush">
 
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between">
+                    <li v-for = "(contact, idx) in contacts"
+                    class="list-group-item list-group-item-action d-flex justify-content-between">
 
                         <div class="d-flex">
 
                             <!-- IMAGE AVATAR -->
-                            <img src="img/avatar-svgrepo-com(1).svg" alt="avatar image">
+                            <img :src="contact.avatar" alt="avatar image">
 
                             <!-- TEXT -->
                             <div class="ms-3">
 
                                 <div class="name-contact">
                                     <strong>
-                                        Michele
+                                        {{contact.name}}
                                     </strong>
                                 </div>
         
@@ -118,215 +119,7 @@
 
                     </li>
                     
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between">
-
-                        <div class="d-flex">
-
-                            <!-- IMAGE AVATAR -->
-                            <img src="img/avatar-svgrepo-com(2).svg" alt="avatar image">
-
-                            <!-- TEXT -->
-                            <div class="ms-3">
-
-                                <div class="name-contact">
-                                    <strong>
-                                        Fabio
-                                    </strong>
-                                </div>
-        
-                                <div class="text-contact">
-                                    Ultimo messaggio inviato
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="time-contact">
-                            12.00
-                        </div>
-
-                    </li>
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between">
-
-                        <div class="d-flex">
-
-                            <!-- IMAGE AVATAR -->
-                            <img src="img/avatar-svgrepo-com(1).svg" alt="avatar image">
-
-                            <!-- TEXT -->
-                            <div class="ms-3">
-
-                                <div class="name-contact">
-                                    <strong>
-                                        Samuele
-                                    </strong>
-                                </div>
-        
-                                <div class="text-contact">
-                                    Ultimo messaggio inviato
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="time-contact">
-                            12.00
-                        </div>
-
-                    </li>
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between">
-
-                        <div class="d-flex">
-
-                            <!-- IMAGE AVATAR -->
-                            <img src="img/avatar-svgrepo-com(2).svg" alt="avatar image">
-
-                            <!-- TEXT -->
-                            <div class="ms-3">
-
-                                <div class="name-contact">
-                                    <strong>
-                                        Alessandro B.
-                                    </strong>
-                                </div>
-        
-                                <div class="text-contact">
-                                    Ultimo messaggio inviato
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="time-contact">
-                            12.00
-                        </div>
-
-                    </li>
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between">
-
-                        <div class="d-flex">
-
-                            <!-- IMAGE AVATAR -->
-                            <img src="img/avatar-svgrepo-com(1).svg" alt="avatar image">
-
-                            <!-- TEXT -->
-                            <div class="ms-3">
-
-                                <div class="name-contact">
-                                    <strong>
-                                        Alessandro L.
-                                    </strong>
-                                </div>
-        
-                                <div class="text-contact">
-                                    Ultimo messaggio inviato
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="time-contact">
-                            12.00
-                        </div>
-
-                    </li>
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between">
-
-                        <div class="d-flex">
-
-                            <!-- IMAGE AVATAR -->
-                            <img src="img/avatar-svgrepo-com(3).svg" alt="avatar image">
-
-                            <!-- TEXT -->
-                            <div class="ms-3">
-
-                                <div class="name-contact">
-                                    <strong>
-                                        Claudia
-                                    </strong>
-                                </div>
-        
-                                <div class="text-contact">
-                                    Ultimo messaggio inviato
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="time-contact">
-                            12.00
-                        </div>
-
-                    </li>
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between">
-
-                        <div class="d-flex">
-
-                            <!-- IMAGE AVATAR -->
-                            <img src="img/avatar-svgrepo-com(1).svg" alt="avatar image">
-
-                            <!-- TEXT -->
-                            <div class="ms-3">
-
-                                <div class="name-contact">
-                                    <strong>
-                                        Federico
-                                    </strong>
-                                </div>
-        
-                                <div class="text-contact">
-                                    Ultimo messaggio inviato
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="time-contact">
-                            12.00
-                        </div>
-
-                    </li>
-
-                    <li class="list-group-item list-group-item-action d-flex justify-content-between">
-
-                        <div class="d-flex">
-
-                            <!-- IMAGE AVATAR -->
-                            <img src="img/avatar-svgrepo-com(2).svg" alt="avatar image">
-
-                            <!-- TEXT -->
-                            <div class="ms-3">
-
-                                <div class="name-contact">
-                                    <strong>
-                                        Davide
-                                    </strong>
-                                </div>
-        
-                                <div class="text-contact">
-                                    Ultimo messaggio inviato
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <div class="time-contact">
-                            12.00
-                        </div>
-
-                    </li>
+                    
 
                 </ul>
 
