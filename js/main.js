@@ -10,6 +10,7 @@ const {createApp} = Vue ;
 createApp({
     data(){
         return{
+            activeContact : 0,
             contacts: [
                 {
                     name: 'Michele',
@@ -176,11 +177,11 @@ createApp({
         }
     },
     methods: {
-        identity(){
-            console.log(this.contacts.name);
+        identity(idx){
+            this.activeContact = idx ;
+            }
         }
-    }
-}).mount("#app");
+    }).mount("#app");
 
 
 

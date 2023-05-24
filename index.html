@@ -90,7 +90,7 @@
 
                     <li
                     v-for = "(contact, idx) in contacts"
-                    @click = "identity"
+                    @click = "identity(idx)"
                     class="list-group-item list-group-item-action d-flex justify-content-between">
 
                         <div class="d-flex">
@@ -135,14 +135,14 @@
                     <div class="d-flex ms-3">
 
                         <!-- IMAGE AVATAR -->
-                        <img src="img/avatar-svgrepo-com(1).svg" alt="avatar image">
+                        <img :src="contacts[activeContact].avatar" alt="avatar image">
 
                         <!-- TEXT -->
                         <div class="ms-3">
 
                             <div class="name-contact">
                                 <strong>
-                                    Michele
+                                    {{contacts[activeContact].name}}
                                 </strong>
                             </div>
     
@@ -164,7 +164,8 @@
                 </div>
 
                 <!-- CHATTING PART -->
-                <div v-for = "(contact, idx) in contacts"
+                <div 
+                v-for = "(contact, idx) in contacts"
                 class="chatting pt-5">
 
                     <div class="message sent">
