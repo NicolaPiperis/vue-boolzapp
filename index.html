@@ -138,7 +138,7 @@
                         <img :src="contacts[activeContact].avatar" alt="avatar image">
 
                         <!-- TEXT -->
-                        <div class="ms-3">
+                        <div class="ms-3 mt-1">
 
                             <div class="name-contact">
                                 <strong>
@@ -165,25 +165,18 @@
 
                 <!-- CHATTING PART -->
                 <div 
-                v-for = "(contact, idx) in contacts"
+                
                 class="chatting pt-5">
 
-                    <div class="message sent">
-                        Hai portato a spasso il cane?
+                    <div 
+                    v-for = "(contact, idx) in contacts[activeContact]"
+                    class="message sent" >
+                        
+                        {{contact.messages.message}}
                         <br>
-                        <span>12.00</span>
-                    </div>
-
-                    <div class="message sent">
-                        Ricordati di stendere i panni
-                        <br>
-                        <span>12.00</span>
-                    </div>
-
-                    <div class="message received">
-                        Tutto fatto!
-                        <br>
-                        <span>12.00</span>
+                        <span>
+                            {{contact.messages.date}}
+                        </span>
                     </div>
 
                 </div>
