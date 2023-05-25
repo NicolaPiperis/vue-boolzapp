@@ -212,13 +212,15 @@ createApp({
                             )
                     }, 1000);
             }
-        },
+        }
+    },
+    computed: {
         filteredContacts() {
             return this.contacts.filter(contact => {
               return contact.name.toLowerCase().includes(this.search.toLowerCase())
             })
         }
-    }    
+    }   
 }).mount("#app");
 
 
