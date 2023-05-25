@@ -82,7 +82,9 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                     
-                    <input id="input-search" type="search" placeholder="Cerca o inizia una nuova chat">
+                    <input
+                    v-model = "search" @keyup.enter = "filteredContacts"
+                    id="input-search" type="search" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
                 <!-- CONTACTS -->
